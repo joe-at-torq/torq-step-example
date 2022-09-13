@@ -1,0 +1,10 @@
+# Build Container
+docker build -t example . --platform=linux/amd64
+
+#Run Container with arguments (exclude the ./torq prefix in the command)
+docker run -it --rm --name example --env COMMAND="testing123" example
+
+#Tag and Upload Container
+docker build -t example . --platform=linux/amd64
+docker tag example joeattorq/example:1.0.0
+docker push joeattorq/example:1.0.0
