@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.18.3
 COPY entrypoint.sh /entrypoint.sh
 RUN  apk update \
     && apk add curl \
